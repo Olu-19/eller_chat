@@ -17,7 +17,6 @@ import { pusherClient } from "@/app/libs/pusher";
 interface ConversationsListProps {
   initialItems: FullConversationType[];
   users: User[];
-  conversations: Conversation[];
 }
 
 const ConversationsList = ({ initialItems, users }: ConversationsListProps) => {
