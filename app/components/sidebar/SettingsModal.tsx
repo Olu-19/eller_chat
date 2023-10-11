@@ -94,7 +94,7 @@ const SettingsModal = ({
               />
               <TextArea
                 disabled={isLoading}
-                placeholder="Write something about yourself"
+                placeholder="Write something about yourself..."
                 label="Bio"
                 id="bio"
                 errors={errors}
