@@ -7,6 +7,7 @@ interface InputProps {
   label: string;
   id: string;
   type?: string;
+  placeholder: string;
   required?: boolean;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
@@ -18,6 +19,7 @@ const TextArea = ({
   id,
   type,
   required,
+  placeholder,
   register,
   errors,
   disabled,
@@ -34,6 +36,7 @@ const TextArea = ({
         <textarea
           id={id}
           autoComplete={id}
+          placeholder={placeholder}
           disabled={disabled}
           {...register(id, { required })}
           className={clsx(`
