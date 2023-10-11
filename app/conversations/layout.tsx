@@ -4,13 +4,15 @@ import getConversations from "@/app/actions/getConversations";
 import getUsers from "@/app/actions/getUsers";
 import { User } from "@prisma/client";
 
+interface ConversationsLayoutProps {
+  children: React.ReactNode;
+  currentUser: User;
+}
+
 export default async function ConversationsLayout({
   children,
   currentUser
-}: {
-  children: React.ReactNode;
-  currentUser: User;
-}) {
+}: ConversationsLayoutProps) {
   const conversations = await getConversations();
   const users = await getUsers();
   return (
